@@ -5262,3 +5262,22 @@ z-index: -1;
     display: none;
   }
 }
+
+
+.mobile-dropdown-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.close-icon {
+  font-size: 1.5rem;
+  color: #bb86fc;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding: 0.25rem 0.5rem;
+}
+
+.close-icon:hover {
+  color: #ffffff;
+}
