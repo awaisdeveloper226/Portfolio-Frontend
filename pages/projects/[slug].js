@@ -6,6 +6,9 @@ import { FreeMode, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import { useEffect, useRef, useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 export default function projectslug() {
   const router = useRouter();
 
@@ -32,6 +35,24 @@ export default function projectslug() {
 
     return new Intl.DateTimeFormat("en-US", options).format(date);
   };
+
+  const swiperRef = useRef(null);
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(true);
+
+  const updateArrows = () => {
+    const swiper = swiperRef.current;
+    if (swiper) {
+      setCanScrollPrev(!swiper.isBeginning);
+      setCanScrollNext(!swiper.isEnd);
+    }
+  };
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      updateArrows();
+    }
+  }, [alldata]);
 
   return (
     <>
@@ -86,6 +107,11 @@ export default function projectslug() {
 
             <div className="projectslugsliderimg">
               <Swiper
+                onSwiper={(swiper) => {
+                  swiperRef.current = swiper;
+                  updateArrows();
+                }}
+                onSlideChange={updateArrows}
                 slidesPerView={"auto"}
                 spaceBetween={30}
                 freeMode={true}
@@ -96,10 +122,27 @@ export default function projectslug() {
                 {alldata &&
                   alldata[0]?.images.map((image, index) => (
                     <SwiperSlide key={index}>
-                      <img src={image} alt={alldata && alldata[0]?.title} />
+                      <img src={image} alt={alldata[0]?.title} />
                     </SwiperSlide>
                   ))}
               </Swiper>
+
+              {canScrollPrev && (
+                <button
+                  className="swiper-arrow left"
+                  onClick={() => swiperRef.current?.slidePrev()}
+                >
+                  <FaChevronLeft />
+                </button>
+              )}
+              {canScrollNext && (
+                <button
+                  className="swiper-arrow right"
+                  onClick={() => swiperRef.current?.slideNext()}
+                >
+                  <FaChevronRight />
+                </button>
+              )}
             </div>
           </div>
         </div>
