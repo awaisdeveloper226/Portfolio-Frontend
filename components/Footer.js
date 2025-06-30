@@ -33,7 +33,7 @@ export default function Footer() {
           />
         </div>
 
-        <div className="ul flex gap-2">
+        <div className="ul nav-links">
           <li>
             <Link href="/services">Services</Link>
           </li>
