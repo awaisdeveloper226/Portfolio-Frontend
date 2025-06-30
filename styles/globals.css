@@ -1666,40 +1666,49 @@ header.sticky {
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 
 .footer {
-    padding: 2rem 1rem;
-    background: #050709;
+  padding: 2rem 1rem;
+  background: #050709;
 }
 
 .dark .footer {
-    background: #2a1454;
+  background: #2a1454;
 }
 
 .footer li a {
-    font-weight: 600;
-    transition: 0.3s;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .footer li a:hover {
-    color: #905ff1;
+  color: #905ff1;
+}
+
+.hero_social li {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.hero_social li:hover {
+  transform: scale(1.1);
 }
 
 .footericons .ficon {
-    width: 30px;
-    height: 30px;
-    background-color: #7b2cf962;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #7b2cf962;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .copyrights {
-    color: var(--main-site-color);
+  color: var(--main-site-color);
 }
 
 .copyrights span {
-    color: #905ff1;
-    font-weight: 700;
+  color: #905ff1;
+  font-weight: 700;
 }
 
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
