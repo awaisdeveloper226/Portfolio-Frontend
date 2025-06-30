@@ -84,7 +84,7 @@ export default function projectslug() {
               </div>
             </div>
 
-            <div className="projectslugslidering">
+            <div className="projectslugsliderimg">
               <Swiper
                 slidesPerView={"auto"}
                 spaceBetween={30}
