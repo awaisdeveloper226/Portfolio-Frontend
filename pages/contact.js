@@ -109,7 +109,7 @@ export default function contact() {
                     <MdAttachEmail />{" "}
                     <span>
                       Email :{" "}
-                      <a href="mailto:awais4414083@gmail" target="_blank">
+                      <a href="mailto:awais4414083@gmail.com" target="_blank">
                         awais4414083@gmail.com
                       </a>
                     </span>
@@ -118,7 +118,10 @@ export default function contact() {
                     <GrLinkedin />{" "}
                     <span>
                       LinkedIn :{" "}
-                      <a href="www.linkedin.com/in/muhammad-awais-773493230" target="_blank">
+                      <a
+                        href="www.linkedin.com/in/muhammad-awais-773493230"
+                        target="_blank"
+                      >
                         https://tinyurl.com/linkedin-awais
                       </a>
                     </span>
