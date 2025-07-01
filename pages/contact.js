@@ -119,7 +119,7 @@ export default function contact() {
                     <span>
                       LinkedIn :{" "}
                       <a href="www.linkedin.com/in/muhammad-awais-773493230" target="_blank">
-                        www.linkedin.com/in/muhammad-awais-773493230
+                        https://tinyurl.com/linkedin-awais
                       </a>
                     </span>
                   </li>
