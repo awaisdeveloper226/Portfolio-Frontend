@@ -110,7 +110,7 @@ export default function contact() {
                     <span>
                       Email :{" "}
                       <a href="tel:123456789" target="_blank">
-                        muh
+                        awais4414083@gmail.com
                       </a>
                     </span>
                   </li>
