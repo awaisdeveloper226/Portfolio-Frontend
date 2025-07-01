@@ -100,7 +100,7 @@ export default function contact() {
                     <FaPhoneVolume />{" "}
                     <span>
                       Phone :{" "}
-                      <a href="tel:+923336408376" target="_blank">
+                      <a href="tel:+923334001563" target="_blank">
                         +92-333-640-8376
                       </a>
                     </span>
