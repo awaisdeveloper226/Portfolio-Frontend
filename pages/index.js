@@ -430,42 +430,42 @@ export default function Home() {
             <div className="mys_card">
               <div className="mys_inner">
                 <img src="/img/react.svg" alt="" />
-                <h3>92%</h3>
+                <h3>95%</h3>
               </div>
               <p className="text-center">React JS</p>
             </div>
             <div className="mys_card">
               <div className="mys_inner">
                 <img src="/img/express.jpeg" alt="" />
-                <h3>92%</h3>
+                <h3>91%</h3>
               </div>
               <p className="text-center">Express JS</p>
             </div>
             <div className="mys_card">
               <div className="mys_inner">
                 <img src="/img/mongodb.svg" alt="" />
-                <h3>92%</h3>
+                <h3>96%</h3>
               </div>
               <p className="text-center">Mongo DB</p>
             </div>
             <div className="mys_card">
               <div className="mys_inner">
                 <img src="/img/nodejs.png" alt="" />
-                <h3>92%</h3>
+                <h3>93%</h3>
               </div>
               <p className="text-center">Node JS</p>
             </div>
             <div className="mys_card">
               <div className="mys_inner">
                 <img src="/img/nextjs.jpeg" alt="" />
-                <h3>92%</h3>
+                <h3>98%</h3>
               </div>
               <p className="text-center">Next JS</p>
             </div>
             <div className="mys_card">
               <div className="mys_inner">
                 <img src="/img/python.png" alt="" />
-                <h3>92%</h3>
+                <h3>90%</h3>
               </div>
               <p className="text-center">Python</p>
             </div>
