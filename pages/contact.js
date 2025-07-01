@@ -1,6 +1,6 @@
 import axios from "axios";
 import Head from "next/head";
-import { FaPhoneVolume, FaTwitter } from "react-icons/fa6";
+import { FaInstagram, FaPhoneVolume, FaTwitter } from "react-icons/fa6";
 import { GrLinkedin } from "react-icons/gr";
 import { MdAttachEmail } from "react-icons/md";
 import { useState } from "react";
@@ -100,7 +100,7 @@ export default function contact() {
                     <FaPhoneVolume />{" "}
                     <span>
                       Phone :{" "}
-                      <a href="tel:123456789" target="_blank">
+                      <a href="tel:+923336408376" target="_blank">
                         +92-333-640-8376
                       </a>
                     </span>
@@ -109,7 +109,7 @@ export default function contact() {
                     <MdAttachEmail />{" "}
                     <span>
                       Email :{" "}
-                      <a href="tel:123456789" target="_blank">
+                      <a href="mailto:awais4414083@gmail" target="_blank">
                         awais4414083@gmail.com
                       </a>
                     </span>
@@ -118,17 +118,17 @@ export default function contact() {
                     <GrLinkedin />{" "}
                     <span>
                       LinkedIn :{" "}
-                      <a href="tel:123456789" target="_blank">
-                        www.linkedin.com
+                      <a href="www.linkedin.com/in/muhammad-awais-773493230" target="_blank">
+                        www.linkedin.com/in/muhammad-awais-773493230
                       </a>
                     </span>
                   </li>
                   <li>
-                    <FaTwitter />{" "}
+                    <FaInstagram />{" "}
                     <span>
-                      Twitter :{" "}
-                      <a href="tel:123456789" target="_blank">
-                        www.twitter.com
+                      Instagram :{" "}
+                      <a href="www.instagram.com" target="_blank">
+                        www.instagram.com
                       </a>
                     </span>
                   </li>
