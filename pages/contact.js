@@ -109,8 +109,8 @@ export default function contact() {
                     <MdAttachEmail />{" "}
                     <span>
                       Email :{" "}
-                      <a href="mailto:awais4414083@gmail.com" target="_blank">
-                        awais4414083@gmail.com
+                      <a href="mailto:awais.web.developer124@gmail.com" target="_blank">
+                        awais.web.developer124@gmail.com
                       </a>
                     </span>
                   </li>
