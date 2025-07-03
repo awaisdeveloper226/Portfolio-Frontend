@@ -1281,7 +1281,7 @@ header.sticky {
 
 .procard {
   position: relative;
-  width: 48%;
+  width: 90%;
   height: 450px;
   padding: 3rem;
   padding-bottom: 0;
@@ -1668,7 +1668,7 @@ header.sticky {
 
 .re_blog {
   position: relative;
-  max-width: 400px;
+  max-width: 1000px;
   height: 400px;
   border-radius: 20px;
   overflow: hidden;
