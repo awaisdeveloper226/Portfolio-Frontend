@@ -500,7 +500,7 @@ export default function Home() {
                       src={blog.images[0] || "/img/noimage.png"}
                       alt={blog.title}
                     />
-                    <span>{blog.blogcategory[0]}</span>
+                    
                   </div>
                   <div className="re_bloginfo">
                     <div className="re_topdate flex gap-1">
