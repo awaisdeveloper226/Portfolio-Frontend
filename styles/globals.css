@@ -1281,14 +1281,15 @@ header.sticky {
 
 .procard {
   position: relative;
-  width: 100%;
-  height: 550px;
+  width: 48%;
+  height: 300px;
   padding: 3rem;
   padding-bottom: 0;
   background-color: #140c1c;
   margin-top: 3rem;
   border-radius: 12px;
   overflow: hidden;
+  padding-bottom: 4rem;
 }
 
 .proimgbox {
@@ -1303,7 +1304,7 @@ header.sticky {
 .proimgbox img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .procontentbox {
@@ -3214,7 +3215,7 @@ header.sticky {
 }
 
 .leftcontp {
-  width: 35%;
+  width: 37%;
 }
 
 .leftcontp h2 {
