@@ -98,7 +98,7 @@ export default function projects() {
               ) : filteredprojects.length === 0 ? (
                 <h1>No Project Found</h1>
               ) : (
-                filteredprojects.slice(0, 4).map((pro) => (
+                filteredprojects.map((pro) => (
                   <Link href={`/projects/${pro.slug}`}className="procard" key={pro._id}>
                     <div className="proimgbox">
                       <img src={pro.images[0]} alt="" />
