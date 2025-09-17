@@ -356,11 +356,13 @@ export default function Home() {
                 <p>Wordpress Developer</p>
               </div>
               </Link>
+        <Link href="https://the-bucking-auction.vercel.app/" target="_blank" >
               <div className="exper_card">
                 <span>2024 - 2025</span>
-                <h3>LEAD DEVELOPERS</h3>
-                <p>SEO Specialist</p>
+                <h3>Buckers Auction</h3>
+                <p>Full Stack Web Developer</p>
               </div>
+        </Link>
             </div>
           </div>
           <div className="education">
