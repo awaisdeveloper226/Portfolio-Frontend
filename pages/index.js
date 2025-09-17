@@ -305,7 +305,7 @@ export default function Home() {
               ) : filteredprojects.length === 0 ? (
                 <h1>No Project Found</h1>
               ) : (
-                filteredprojects.slice(0, 4).map((pro) => (
+                filteredprojects.map((pro) => (
                   <Link
                     href={`/projects/${pro.slug}`}
                     className="procard"
