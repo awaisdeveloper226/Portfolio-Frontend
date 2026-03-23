@@ -101,7 +101,7 @@ export default function contact() {
                     <span>
                       
                       <a href="tel:+923336408376" target="_blank">
-                        Call Us!
+                        Contact Us
                       </a>
                     </span>
                   </li>
@@ -114,7 +114,7 @@ export default function contact() {
                         href="mailto:awais.web.developer124@gmail.com"
                         target="_blank"
                       >
-                        Email Us!
+                        Send an Email
                       </a>
                     </span>
                   </li>
@@ -128,7 +128,7 @@ export default function contact() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Connect on Linkedin!
+                        View LinkedIn Profile
                       </a>
                     </span>
                   </li>
