@@ -99,9 +99,9 @@ export default function contact() {
                   <li>
                     <FaPhoneVolume />{" "}
                     <span>
-                      Phone :{" "}
+                      
                       <a href="tel:+923336408376" target="_blank">
-                        +92-333-640-8376
+                        Call Us!
                       </a>
                     </span>
                   </li>
@@ -109,12 +109,12 @@ export default function contact() {
                   <li>
                     <MdAttachEmail />{" "}
                     <span>
-                      Email :{" "}
+                      
                       <a
                         href="mailto:awais.web.developer124@gmail.com"
                         target="_blank"
                       >
-                        awais.web.developer124@gmail.com
+                        Email Us!
                       </a>
                     </span>
                   </li>
@@ -122,13 +122,13 @@ export default function contact() {
                   <li>
                     <GrLinkedin />{" "}
                     <span>
-                      LinkedIn :{" "}
+                      
                       <a
                         href="https://www.linkedin.com/in/muhammad-awais-773493230"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Visit Profile
+                        Connect on Linkedin!
                       </a>
                     </span>
                   </li>
