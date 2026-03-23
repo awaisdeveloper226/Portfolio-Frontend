@@ -126,6 +126,7 @@ export default function contact() {
     </li>
   </ul>
 </div>
+          </div>
             <div className="rightcontp">
               <form action="" onSubmit={createProduct}>
                 <div className="rightconttitle">
