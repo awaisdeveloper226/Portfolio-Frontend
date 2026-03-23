@@ -94,40 +94,7 @@ export default function contact() {
               </p>
               <p>Use the form on this page to get in touch</p>
               <p>I love questions and feedback</p>
-              <div className="leftsociinfo">
-  <ul>
-    <li>
-      <a href="tel:+923336408376" className="contact-link">
-        <FaPhoneVolume />
-        <span>Call Us</span>
-      </a>
-    </li>
-
-    <li>
-      <a
-        href="mailto:awais.web.developer124@gmail.com"
-        className="contact-link"
-      >
-        <MdAttachEmail />
-        <span>Email Us</span>
-      </a>
-    </li>
-
-    <li>
-      <a
-        href="https://www.linkedin.com/in/muhammad-awais-773493230"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="contact-link"
-      >
-        <GrLinkedin />
-        <span>Connect on LinkedIn</span>
-      </a>
-    </li>
-  </ul>
-</div>
-          </div>
-            <div className="rightcontp">
+              <div className="leftsociinfo"> <ul> <li> <FaPhoneVolume />{" "} <span> Phone :{" "} <a href="tel:+923336408376" target="_blank"> +92-333-640-8376 </a> </span> </li> <li> <MdAttachEmail />{" "} <span> Email :{" "} <a href="mailto:awais.web.developer124@gmail.com" target="_blank"> awais.web.developer124@gmail.com </a> </span> </li> <li> <GrLinkedin />{" "} <span> LinkedIn :{" "} <a href="www.linkedin.com/in/muhammad-awais-773493230" target="_blank" > https:/
               <form action="" onSubmit={createProduct}>
                 <div className="rightconttitle">
                   <h2>Your Contact Information</h2>
