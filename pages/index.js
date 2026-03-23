@@ -144,12 +144,6 @@ export default function Home() {
                 </a>
                 <ul className="hero_social">
                   <li>
-                    <Link href="/">
-                      {" "}
-                      <FaInstagram />
-                    </Link>
-                  </li>
-                  <li>
                     <Link
                       href="https://core-tech-solutions.vercel.app/"
                       target="_blank"
