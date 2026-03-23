@@ -61,11 +61,6 @@ export default function Footer() {
 
         <ul className="hero_social">
           <li>
-            <Link href="/" target="_blank">
-              <FaInstagram />
-            </Link>
-          </li>
-          <li>
             <Link
               href="https://core-tech-solutions.vercel.app/"
               target="_blank"
