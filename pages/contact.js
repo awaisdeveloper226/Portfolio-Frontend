@@ -126,15 +126,6 @@ export default function contact() {
                       </a>
                     </span>
                   </li>
-                  <li>
-                    <FaInstagram />{" "}
-                    <span>
-                      Instagram :{" "}
-                      <a href="https://www.instagram.com" target="_blank">
-                        www.instagram.com
-                      </a>
-                    </span>
-                  </li>
                 </ul>
               </div>
             </div>
