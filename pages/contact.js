@@ -179,22 +179,42 @@ export default function Contact() {
 
               <div className="leftsociinfo">
                 <ul>
-                  <ContactLink
-                    href="tel:+923336408376"
-                    icon={<FaPhoneVolume />}
-                    label="Call Us"
-                  />
-                  <ContactLink
-                    href="mailto:awais.web.developer124@gmail.com"
-                    icon={<MdAttachEmail />}
-                    label="Email Us"
-                  />
-                  <ContactLink
-                    href="https://www.linkedin.com/in/muhammad-awais-773493230"
-                    icon={<GrLinkedin />}
-                    label="Connect on LinkedIn"
-                    isExternal
-                  />
+                  <li>
+                    <FaPhoneVolume />{" "}
+                    <span>
+                      
+                      <a href="tel:+923336408376" target="_blank">
+                        Contact Us
+                      </a>
+                    </span>
+                  </li>
+
+                  <li>
+                    <MdAttachEmail />{" "}
+                    <span>
+                      
+                      <a
+                        href="mailto:awais.web.developer124@gmail.com"
+                        target="_blank"
+                      >
+                        Send an Email
+                      </a>
+                    </span>
+                  </li>
+
+                  <li>
+                    <GrLinkedin />{" "}
+                    <span>
+                      
+                      <a
+                        href="https://www.linkedin.com/in/muhammad-awais-773493230"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View LinkedIn Profile
+                      </a>
+                    </span>
+                  </li>
                 </ul>
               </div>
             </div>
