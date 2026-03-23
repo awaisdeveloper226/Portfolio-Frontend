@@ -5,75 +5,156 @@ import { GrLinkedin } from "react-icons/gr";
 import { MdAttachEmail } from "react-icons/md";
 import { useState } from "react";
 
-export default function contact() {
-  const [name, setname] = useState("");
-  const [lname, setlname] = useState("");
-  const [email, setemail] = useState("");
-  const [company, setcompany] = useState("");
-  const [phone, setphone] = useState("");
-  const [country, setcountry] = useState("");
-  const [price, setprice] = useState("");
-  const [description, setdescription] = useState("");
-  const [project, setproject] = useState("");
+// ─── Constants ────────────────────────────────────────────────────────────────
 
-  const [messageOk, setmessageOk] = useState("");
+const PROJECT_OPTIONS = [
+  "Website Development",
+  "App Development",
+  "SEO Optimization",
+  "Wordpress Website",
+  "E-commerce Site",
+  "Performance Evaluation",
+];
 
-  async function createProduct(ev) {
-    ev.preventDefault();
+const BUDGET_OPTIONS = [
+  "Less than $200",
+  "$200 - $400",
+  "$400 - $700",
+  "More than $700",
+];
 
-    setmessageOk("Sending message please wait...");
+const COUNTRIES = [
+  "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Argentina",
+  "Armenia", "Australia", "Austria", "Azerbaijan", "Bahrain", "Bangladesh",
+  "Belgium", "Belarus", "Brazil", "Brunei", "Bulgaria", "Canada", "Cambodia",
+  "China", "Croatia", "Czech Republic", "Denmark", "Egypt", "Estonia",
+  "Ethiopia", "Fiji", "Finland", "France", "Georgia", "Germany", "Ghana",
+  "Greece", "Hungary", "Iceland", "India", "Indonesia", "Ireland", "Italy",
+  "Japan", "Kazakhstan", "Kenya", "Kyrgyzstan", "Laos", "Latvia", "Lithuania",
+  "Madagascar", "Malaysia", "Mexico", "Mongolia", "Morocco", "Myanmar",
+  "Nepal", "New Zealand", "Nigeria", "Norway", "Pakistan", "Papua New Guinea",
+  "Philippines", "Poland", "Portugal", "Romania", "Russia", "Saudi Arabia",
+  "Serbia", "Singapore", "Slovakia", "Slovenia", "South Africa", "South Korea",
+  "Spain", "Sri Lanka", "Sweden", "Switzerland", "Tajikistan", "Tanzania",
+  "Thailand", "Turkey", "Turkmenistan", "Uganda", "Ukraine",
+  "United Arab Emirates", "United Kingdom", "United States", "Uzbekistan",
+  "Vietnam", "Zimbabwe",
+];
 
-    const data = {
-      name,
-      lname,
-      email,
-      company,
-      phone,
-      country,
-      project,
-      price,
-      description,
-    };
+const INITIAL_FORM_STATE = {
+  name: "",
+  lname: "",
+  email: "",
+  company: "",
+  phone: "",
+  country: "",
+  project: [],
+  price: "",
+  description: "",
+};
 
-    try {
-      await axios.post("/api/contacts", data);
+// ─── Sub-components ───────────────────────────────────────────────────────────
 
-      setmessageOk("Message sent successfully");
-      setTimeout(() => {
-        setmessageOk("");
-      }, 3000);
+function SectionTitle({ children }) {
+  return (
+    <div className="rightconttitle">
+      <h2>{children}</h2>
+    </div>
+  );
+}
 
-      setname("");
-      setlname("");
-      setemail("");
-      setcompany("");
-      setphone("");
-      setcountry("");
-      setproject("");
-      setprice("");
-      setdescription("");
-    } catch (error) {
-      if (error.response) {
-        console.log(error.response.data);
-      } else if (error.request) {
-        console.log(error.request);
-      } else {
-        console.log("Error", error.message);
-      }
+function ContactLink({ href, icon, label, isExternal = false }) {
+  return (
+    <li>
+      <a
+        href={href}
+        className="contact-link"
+        {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
+      >
+        {icon}
+        <span>{label}</span>
+      </a>
+    </li>
+  );
+}
 
-      setmessageOk("Error sending message");
-    }
-  }
+function ProjectCheckbox({ option, checked, onChange }) {
+  return (
+    <label key={option} className="cyberpunk-checkbox-label">
+      <input
+        type="checkbox"
+        value={option}
+        className="cyberpunk-checkbox"
+        checked={checked}
+        onChange={() => onChange(option)}
+      />
+      {option}
+    </label>
+  );
+}
+
+function BudgetRadio({ option, checked, onChange }) {
+  return (
+    <div className="radio-button" key={option}>
+      <input
+        type="radio"
+        name="example-radio"
+        value={option}
+        id={option}
+        checked={checked}
+        onChange={onChange}
+      />
+      <span className="radio"></span>
+      <label htmlFor={option}>{option}</label>
+    </div>
+  );
+}
+
+// ─── Main Component ───────────────────────────────────────────────────────────
+
+export default function Contact() {
+  const [form, setForm] = useState(INITIAL_FORM_STATE);
+  const [messageOk, setMessageOk] = useState("");
+
+  // ── Handlers ──────────────────────────────────────────────────────────────
+
+  const handleChange = (field) => (e) => {
+    setForm((prev) => ({ ...prev, [field]: e.target.value }));
+  };
 
   const handleProjectChange = (projectName) => {
-    if (project.includes(projectName))
-      setproject(project.filter((item) => item !== projectName));
-    else setproject([...project, projectName]);
+    setForm((prev) => ({
+      ...prev,
+      project: prev.project.includes(projectName)
+        ? prev.project.filter((item) => item !== projectName)
+        : [...prev.project, projectName],
+    }));
   };
 
-  const handlePriceChange = (e) => {
-    setprice(e.target.value);
+  const resetForm = () => setForm(INITIAL_FORM_STATE);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setMessageOk("Sending message please wait...");
+
+    try {
+      await axios.post("/api/contacts", form);
+      setMessageOk("Message sent successfully");
+      setTimeout(() => setMessageOk(""), 3000);
+      resetForm();
+    } catch (error) {
+      if (error.response) {
+        console.error("Response error:", error.response.data);
+      } else if (error.request) {
+        console.error("Request error:", error.request);
+      } else {
+        console.error("Error:", error.message);
+      }
+      setMessageOk("Error sending message");
+    }
   };
+
+  // ── Render ─────────────────────────────────────────────────────────────────
 
   return (
     <>
@@ -84,6 +165,8 @@ export default function contact() {
       <div className="contactpage">
         <div className="container">
           <div className="contactformp">
+
+            {/* ── Left Panel ── */}
             <div className="leftcontp">
               <h2>Get in Touch</h2>
               <h2>Lets Talk about your Project</h2>
@@ -96,157 +179,130 @@ export default function contact() {
 
               <div className="leftsociinfo">
                 <ul>
-                  <li>
-                    <FaPhoneVolume />{" "}
-                    <span>
-                      
-                      <a href="tel:+923336408376" target="_blank">
-                        Contact Us
-                      </a>
-                    </span>
-                  </li>
-
-                  <li>
-                    <MdAttachEmail />{" "}
-                    <span>
-                      
-                      <a
-                        href="mailto:awais.web.developer124@gmail.com"
-                        target="_blank"
-                      >
-                        Send an Email
-                      </a>
-                    </span>
-                  </li>
-
-                  <li>
-                    <GrLinkedin />{" "}
-                    <span>
-                      
-                      <a
-                        href="https://www.linkedin.com/in/muhammad-awais-773493230"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        View LinkedIn Profile
-                      </a>
-                    </span>
-                  </li>
+                  <ContactLink
+                    href="tel:+923336408376"
+                    icon={<FaPhoneVolume />}
+                    label="Call Us"
+                  />
+                  <ContactLink
+                    href="mailto:awais.web.developer124@gmail.com"
+                    icon={<MdAttachEmail />}
+                    label="Email Us"
+                  />
+                  <ContactLink
+                    href="https://www.linkedin.com/in/muhammad-awais-773493230"
+                    icon={<GrLinkedin />}
+                    label="Connect on LinkedIn"
+                    isExternal
+                  />
                 </ul>
               </div>
             </div>
 
+            {/* ── Right Panel (Form) ── */}
             <div className="rightcontp">
-              <form action="" onSubmit={createProduct}>
-                <div className="rightconttitle">
-                  <h2>Your Contact Information</h2>
-                </div>
+              <form onSubmit={handleSubmit}>
 
+                {/* Contact Information */}
+                <SectionTitle>Your Contact Information</SectionTitle>
                 <div className="rightcontinputs">
                   <input
                     type="text"
-                    value={name}
-                    onChange={(e) => setname(e.target.value)}
+                    value={form.name}
+                    onChange={handleChange("name")}
                     placeholder="First Name"
                     required
                   />
                   <input
                     type="text"
-                    value={lname}
-                    onChange={(e) => setlname(e.target.value)}
+                    value={form.lname}
+                    onChange={handleChange("lname")}
                     placeholder="Last Name"
                     required
                   />
                   <input
                     type="email"
-                    value={email}
-                    onChange={(e) => setemail(e.target.value)}
+                    value={form.email}
+                    onChange={handleChange("email")}
                     placeholder="Email Address"
                     required
                   />
                   <input
                     type="text"
-                    value={company}
-                    onChange={(e) => setcompany(e.target.value)}
+                    value={form.company}
+                    onChange={handleChange("company")}
                     placeholder="Company Name"
                     required
                   />
                   <input
                     type="text"
-                    value={phone}
-                    onChange={(e) => setphone(e.target.value)}
+                    value={form.phone}
+                    onChange={handleChange("phone")}
                     placeholder="Phone Number"
                     required
                   />
-
                   <select
                     name="country"
-                    value={country}
-                    onChange={(e) => setcountry(e.target.value)}
+                    value={form.country}
+                    onChange={handleChange("country")}
                   >
                     <option value="">Select a country</option>
-                    <option value="Pakistan">Pakistan</option>
-                    <option value="United States">United States</option>
-                    <option value="United Kingdom">United Kingdom</option>
+                    {COUNTRIES.map((c) => (
+                      <option key={c} value={c}>{c}</option>
+                    ))}
                   </select>
                 </div>
 
-                <div className="rightconttitle">
-                  <h2>What services do you need for your project?</h2>
-                </div>
-
+                {/* Services */}
+                <SectionTitle>
+                  What services do you need for your project?
+                </SectionTitle>
                 <div className="rightcontcheckbox">
-                  {[
-                    "Website Development",
-                    "App Development",
-                    "SEO Optimization",
-                  ].map((projectOption) => (
-                    <label key={projectOption}>
-                      <input
-                        type="checkbox"
-                        value={projectOption}
-                        checked={project.includes(projectOption)}
-                        onChange={() => handleProjectChange(projectOption)}
-                      />
-                      {projectOption}
-                    </label>
+                  {PROJECT_OPTIONS.map((option) => (
+                    <ProjectCheckbox
+                      key={option}
+                      option={option}
+                      checked={form.project.includes(option)}
+                      onChange={handleProjectChange}
+                    />
                   ))}
                 </div>
 
-                <div className="rightconttitle">
-                  <h2>How much is budget for your next project?</h2>
-                </div>
-
+                {/* Budget */}
+                <SectionTitle>
+                  How much is budget for your next project?
+                </SectionTitle>
                 <div className="rightcontredio">
-                  {["Less than $200", "$200 - $400"].map((budgetOption) => (
-                    <div key={budgetOption}>
-                      <input
-                        type="radio"
-                        name="example-radio"
-                        value={budgetOption}
-                        checked={price === budgetOption}
-                        onChange={handlePriceChange}
-                      />
-                      <label>{budgetOption}</label>
-                    </div>
+                  {BUDGET_OPTIONS.map((option) => (
+                    <BudgetRadio
+                      key={option}
+                      option={option}
+                      checked={form.price === option}
+                      onChange={handleChange("price")}
+                    />
                   ))}
                 </div>
 
-                <div className="rightconttitle">
-                  <h2>Tell me about your project</h2>
+                {/* Description */}
+                <SectionTitle>Tell me about your project</SectionTitle>
+                <div className="rightcontpera">
+                  <textarea
+                    value={form.description}
+                    onChange={handleChange("description")}
+                    name="description"
+                    rows={4}
+                    placeholder="Project Description"
+                  />
+                  <hr />
+                  <div className="righhcontsbtn flex-right gap-3">
+                    <button type="submit">Submit</button>
+                    {messageOk && <p>{messageOk}</p>}
+                  </div>
                 </div>
 
-                <textarea
-                  value={description}
-                  onChange={(ev) => setdescription(ev.target.value)}
-                  rows={4}
-                  placeholder="Project Description"
-                />
-
-                <button type="submit">Submit</button>
-                <p>{messageOk}</p>
               </form>
             </div>
+
           </div>
         </div>
       </div>
