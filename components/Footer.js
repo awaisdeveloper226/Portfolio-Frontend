@@ -62,7 +62,7 @@ export default function Footer() {
         <ul className="hero_social">
           <li>
             <Link
-              href="https://core-tech-solutions.vercel.app/"
+              href="https://www.coretechsolutions.org/"
               target="_blank"
             >
               <LiaBasketballBallSolid />
