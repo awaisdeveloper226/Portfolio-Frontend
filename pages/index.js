@@ -145,7 +145,7 @@ export default function Home() {
                 <ul className="hero_social">
                   <li>
                     <Link
-                      href="https://core-tech-solutions.vercel.app/"
+                      href="https://www.coretechsolutions.org/"
                       target="_blank"
                     >
                       {" "}
