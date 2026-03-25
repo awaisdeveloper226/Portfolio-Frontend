@@ -84,7 +84,7 @@ export default function Footer() {
         </ul>
 
         <div className="copyrights">
-          &copy; 2025 All Rights Reserved By <span>Muhammad Awais</span>
+          &copy; 2026 All Rights Reserved By <span>Muhammad Awais</span>
         </div>
       </div>
     </footer>
