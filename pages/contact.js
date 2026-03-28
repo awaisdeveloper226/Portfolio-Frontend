@@ -10,7 +10,7 @@ import { useState } from "react";
 const PROJECT_OPTIONS = [
   "Website Development",
   "App Development",
-  "SEO Optimization",
+  "UI/UX Design",
   "Wordpress Website",
   "E-commerce Site",
   "Performance Evaluation",
