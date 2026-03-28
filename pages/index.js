@@ -383,11 +383,11 @@ export default function Home() {
                   <p>Udemy</p>
                 </div>
               </Link>
-              <Link href="/img/SEO Certificate.png" target="_blank">
+              <Link href="/img/App Certificate.png" target="_blank">
                 <div className="exper_card">
-                  <span>2024</span>
+                  <span>2026</span>
                   <h3>
-                    SEO Training Masterclass 2025: Beginner To Advanced SEO
+                    Mastering React Native - Complete Guide to App Development
                   </h3>
                   <p>Udemy</p>
                 </div>
