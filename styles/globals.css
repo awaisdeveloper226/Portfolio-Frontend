@@ -2799,7 +2799,7 @@ header.sticky {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between; */
-  columns: 3;
+  columns: 2;
   column-gap: 3rem;
   margin: 20px auto;
 }
@@ -2924,7 +2924,7 @@ header.sticky {
 
 .pricingcards {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
 }
 
@@ -2933,6 +2933,8 @@ header.sticky {
   padding: 1.8rem;
   border-radius: 10px;
   width: 30%;
+  display: flex;           /* add this */
+  flex-direction: column;  /* add this */
   /* transition: 0.3s ease-in-out; */
 }
 
