@@ -31,12 +31,7 @@ export default function Home() {
       title: "App Development",
       description:
         "Transform your idea into a sleek, high-performance mobile app. We develop custom iOS, Android, and cross-platform apps that offer seamless user experiences, robust performance, and long-term scalability for your business.",
-    },
-    {
-      title: "SEO",
-      description:
-        "Drive targeted traffic and boost your search engine rankings with our expert SEO services. From on-page optimization to strategic keyword targeting, we help your business stand out, get found, and grow organically.",
-    },
+    }
   ];
 
   const [loading, setloading] = useState(true);
@@ -102,7 +97,7 @@ export default function Home() {
     <>
       <Head>
         <title>Awais - Personal Portfolio</title>
-        <meta name="description" content="vbmcoder - Personal Portfolio" />
+        <meta name="description" content="muhammadawais - Personal Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" type="image/png" href="/favicon.png" />
       </Head>
@@ -125,7 +120,7 @@ export default function Home() {
               <span className="hero_sb_title">I am Awais</span>
               <h1 className="hero_title">
                 Web Developer + <br />{" "}
-                <span className="typed-text">SEO Specialist</span>
+                <span className="typed-text">App Developer</span>
               </h1>
               <div className="hero_img_box heroimgbox">
                 <img src="/img/me.png" alt="" />
@@ -255,7 +250,7 @@ export default function Home() {
               <h2>My Recent Works</h2>
               <p>
                 Explore a selection of projects that showcase our expertise in
-                web development, mobile apps, and SEO. Each solution is crafted
+                web development and mobile apps. Each solution is crafted
                 to deliver real results—optimized for performance, designed for
                 impact, and built to solve real business challenges. Let our
                 work speak for itself.
@@ -283,12 +278,6 @@ export default function Home() {
                 onClick={() => handleCategoryChange("App Development")}
               >
                 App
-              </button>
-              <button
-                className={selectedcategory === "SEO" ? "active" : ""}
-                onClick={() => handleCategoryChange("SEO")}
-              >
-                SEO
               </button>
             </div>
             <div className="projects_cards">
@@ -336,18 +325,18 @@ export default function Home() {
                   <p>Full Stack Web Developer</p>
                 </div>
               </Link>
-              <Link href="https://www.scoutco.org" target="_blank">
+              <Link href="https://castillo-dry-wall.vercel.app/" target="_blank">
                 <div className="exper_card">
                   <span>2025 - Present</span>
-                  <h3>Scout</h3>
+                  <h3>Castillo Drywall</h3>
                   <p>Full Stack Web Developer</p>
                 </div>
               </Link>
-              <Link href="https://www.polishedpersona.blog" target="_blank">
+              <Link href="https://play.google.com/store/apps/details?id=com.awais.cns&pcampaignid=web_share" target="_blank">
               <div className="exper_card">
                 <span>2023 - 2024</span>
-                <h3>Polished Persona</h3>
-                <p>Wordpress Developer</p>
+                <h3>CNS</h3>
+                <p>Mobile App Developer</p>
               </div>
               </Link>
         <Link href="https://the-bucking-auction.vercel.app/" target="_blank" >
