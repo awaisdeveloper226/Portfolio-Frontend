@@ -63,29 +63,6 @@ export default function services() {
                 </p>
               </div>
 
-              <div className="csservice">
-                <span>03</span>
-                <div>
-                  <h2>SEO Optimization</h2>
-                  <img
-                    src="/img/website_icon.svg"
-                    alt="SEO Optimization Icon"
-                  />
-                </div>
-                <ul>
-                  <li>Website speed and structure optimization</li>
-                  <li>On-page SEO and keyword targeting</li>
-                  <li>Mobile-friendly improvements</li>
-                  <li>Technical SEO audits</li>
-                  <li>Rank tracking and ongoing updates</li>
-                </ul>
-                <p>
-                  I help your website rank higher on Google and drive more
-                  organic traffic through effective SEO strategies. With a focus
-                  on technical SEO, content optimization, and user experience, I
-                  ensure your website is search-engine and user-friendly.
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -123,9 +100,7 @@ export default function services() {
                     <li>
                       <IoMdCheckmark /> Mobile Responsive Design
                     </li>
-                    <li>
-                      <IoMdCheckmark /> Basic SEO Setup
-                    </li>
+                    
                     <li>
                       <IoMdCheckmark /> Delivery in 3 Days
                     </li>
@@ -165,7 +140,7 @@ export default function services() {
                       <IoMdCheckmark /> Custom Admin Panel
                     </li>
                     <li>
-                      <IoMdCheckmark /> Responsive & SEO Optimized
+                      <IoMdCheckmark /> Responsive
                     </li>
                     <li>
                       <IoMdCheckmark /> Basic Contact Form & Map
@@ -205,7 +180,7 @@ export default function services() {
                       <IoMdCheckmark /> 1 Native Android App
                     </li>
                     <li>
-                      <IoMdCheckmark /> SEO & Performance Optimization
+                      <IoMdCheckmark /> Performance Optimization
                     </li>
                     <li>
                       <IoMdCheckmark /> Multi-language Support
