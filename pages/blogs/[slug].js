@@ -162,13 +162,6 @@ const BlogPage = () => {
                         <SlCalender />
                         <span>{formatDate(blogdata.blog.createdAt)}</span>
                       </div>
-                      <div className="adminslug">
-                        <CiRead />
-                        <span>
-                          Comments (
-                          {blogdata.comments ? blogdata.comments.length : 0})
-                        </span>
-                      </div>
                     </div>
                     <div className="shareblogslug">
                       <div
@@ -237,19 +230,8 @@ const BlogPage = () => {
                       </ReactMarkdown>
                     </div>
                   )}
-
-                  <div className="blogusecomments">
-                    <h2>Comments</h2>
-                    {renderComments(blogdata.comments)}
-                  </div>
                 </div>
                 <div className="rightsitedetails">
-                  <div className="rightslugsearchbar">
-                    <input type="text" placeholder="Search..." />
-                    <button>
-                      <FiSearch />
-                    </button>
-                  </div>
                   <div className="rightslugcategory">
                     <h2>Categories</h2>
                     <ul>
