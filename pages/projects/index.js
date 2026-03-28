@@ -73,22 +73,6 @@ export default function projects() {
               >
                 App
               </button>
-              <button
-                className={
-                  selectedcategory === "E-commerce Site" ? "active" : ""
-                }
-                onClick={() => handleCategoryChange("E-commerce Site")}
-              >
-                Digital
-              </button>
-              <button
-                className={
-                  selectedcategory === "Performance Evaluation" ? "active" : ""
-                }
-                onClick={() => handleCategoryChange("Performance Evaluation")}
-              >
-                Content
-              </button>
             </div>
             <div className="projects_cards">
               {loading ? (
