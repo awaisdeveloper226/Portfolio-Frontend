@@ -1299,12 +1299,14 @@ header.sticky {
   border-radius: 10px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  background-color: #1a1a2e;
 }
 
 .proimgbox img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .procontentbox {
@@ -4459,6 +4461,9 @@ header.sticky {
 .proslugimg img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  max-height: 600px;
 }
 
 .projectsluginfo {
@@ -4549,8 +4554,10 @@ header.sticky {
 
 .projectslugsliderimg img {
   width: 350px;
-  height: 100%;
+  height: 420px;
   object-fit: cover;
+  object-position: top center;
+  border-radius: 10px;
 }
 
 .projectslugsliderimg .swiper-wrapper {
