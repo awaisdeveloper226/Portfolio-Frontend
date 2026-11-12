@@ -140,15 +140,6 @@ export default function Home() {
                 <ul className="hero_social">
                   <li>
                     <Link
-                      href="https://www.coretechsolutions.org/"
-                      target="_blank"
-                    >
-                      {" "}
-                      <LiaBasketballBallSolid />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
                       href="https://www.linkedin.com/in/muhammad-awais-773493230"
                       target="_blank"
                     >
