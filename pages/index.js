@@ -162,7 +162,7 @@ export default function Home() {
 
             <div className="heroimageright">
               <div className="hero_img_box">
-                <img src="/img/me.png" alt="" />
+                <img src="/img/me.jpeg" alt="" />
               </div>
             </div>
           </div>
